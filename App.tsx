@@ -1,19 +1,28 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+import { ThemeProvider } from "styled-components/native";
+import { theme } from "./theme";
+import Wrapper from './components/Wrapper';
 
-export default function App() {
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+
+function HomeScreen() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
+    <Wrapper>
+      <Text>Home Screen</Text>
+    </Wrapper>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+export default function App() {
+  return (
+    <ThemeProvider theme={theme}>
+      <Wrapper>
+        <Text>Open up App.tsx to start working on your app!</Text>
+      </Wrapper>
+    </ThemeProvider>
+  );
+}
