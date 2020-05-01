@@ -1,28 +1,23 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Button } from 'react-native';
 import { ThemeProvider } from "styled-components/native";
 import { theme } from "./theme";
-import Wrapper from './components/Wrapper';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { HomeScreen, AuthorScreen } from './screens/index';
 
-
-function HomeScreen() {
-  return (
-    <Wrapper>
-      <Text>Home Screen</Text>
-    </Wrapper>
-  );
-}
-
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Wrapper>
-        <Text>Open up App.tsx to start working on your app!</Text>
-      </Wrapper>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="Author" component={AuthorScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </ThemeProvider>
   );
 }
