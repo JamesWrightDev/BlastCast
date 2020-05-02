@@ -1,15 +1,16 @@
 const BASE_URL:string = "https://itunes.apple.com/search?media=podcast";
 
-const fetchFeeds = (term:string) => {
-  let endpoint:string = `${BASE_URL}&term=${term}`
+const fetchFeeds = async (term:string) => {
+  try{
+    let endpoint:string = `${BASE_URL}&term=${term}`;
+    const result = await fetch(endpoint);
+    const response = await result.json();
 
-  fetch(endpoint)
-  .then((response) => {
-    return response.json();
-  })
-  .then((json) => {
-    return json;
-  })
+    return response
+  }catch(error){
+    console.log(error);
+  }
+
 }
 
 export default fetchFeeds;

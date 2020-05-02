@@ -5,41 +5,28 @@ import {
   Text,
   View,
 } from 'react-native';
+import { Author } from '../types';
 import TrackList from './TrackList/TrackListContainer';
 
-type AuthorProfileProps = {
-  heading: string,
-  subheading: string,
-  imageUrl: string,
-}
-
-const AuthorProfile = (Props: AuthorProfileProps) => {
+const AuthorProfile = (Props: Author) => {
   return (
     <View>
       <ProfileImage
-        source={{
-          uri: 'https://images.pexels.com/photos/123335/pexels-photo-123335.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
-        }
-        }
+        source={{uri: Props.imageUrl}}
       />
-      <ProfileName>Tech Podcast123</ProfileName>
+      <ProfileName>
+        {Props.name}
+      </ProfileName>
       <TrackList
-        author="TechPodcast"
-        trackList={[
-          {
-            name: "james",
-            length: 12,
-            date: "120/20/10"
-          },
-        ]}
+        trackList={Props.tracks}
       />
     </View>
   )
 }
 
 const ProfileImage = styled(Image)`
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 100px;
   margin: 0 auto;
 `
@@ -48,6 +35,12 @@ const ProfileName = styled(Text)`
   font-size: 32px;
   text-align: center;
   padding: 30px 0;
+  color: white;
+  font-weight: bold;
+`
+const ProfileDescription = styled(Text)`
+  font-size: 18px;
+  text-align: center;
   color: white;
   font-weight: bold;
 `

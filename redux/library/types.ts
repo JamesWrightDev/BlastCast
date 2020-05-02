@@ -1,5 +1,6 @@
 export interface LibraryState {
   loaded: boolean,
+  feeds: Object[],
 }
 
 export const FETCH_LIBRARY_FEEDS = "@FETCH_LIBRARY_FEEDS"

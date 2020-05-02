@@ -7,6 +7,7 @@ import {
 
 const initialState: LibraryState = {
   loaded: false,
+  feeds: [],
 };
 
 export function libraryReducer(
@@ -22,6 +23,8 @@ export function libraryReducer(
     case FETCH_LIBRARY_FEEDS_SUCCESS: {
       return {
         ...state,
+        loaded: true,
+        feeds: action.payload,
       };
     }
     default:

@@ -5,19 +5,13 @@ import {
   View,
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-
-type TrackProps = {
-  name: string,
-  length: number,
-  date: string,
-}
+import {Track} from '../../types';
 
 type TrackListProps = {
-  trackList: Array<TrackProps>,
-  author: string,
+  trackList: Array<Track>,
 }
 
-const Track = (Props: TrackProps) => {
+const TrackItem = (Props: Track) => {
   return (
     <TrackWrapper>
       <TrackName>
@@ -32,11 +26,13 @@ const TrackList = (Props: TrackListProps) => {
     <ScrollView>
       <View>
         {
+          Props.trackList &&
           Props.trackList.map(item =>
-              <Track
-                name={item.name}
-                length={item.length}
+              <TrackItem
+                name={item.title}
+                length={'123'}
                 date={"10/2/2020"}
+                sourceUrl={item.link}
               />
           )
         }

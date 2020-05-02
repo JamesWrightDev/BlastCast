@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Text, View, Button } from 'react-native';
 import { ThemeProvider } from "styled-components/native";
 import { theme } from "./theme";
@@ -12,7 +12,8 @@ import configureStore from './redux/store';
 const Stack = createStackNavigator();
 
 export default function App() {
-  const store = configureStore();
+const store = configureStore();
+
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
