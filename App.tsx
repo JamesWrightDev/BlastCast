@@ -13,7 +13,17 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator
+          screenOptions={{
+            headerStyle: {
+              backgroundColor: '#0b132b',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+        >
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Author" component={AuthorScreen} />
         </Stack.Navigator>

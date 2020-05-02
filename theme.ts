@@ -19,14 +19,20 @@ declare module "styled-components" {
 
 export const theme: DefaultTheme = {
   colors: {
-    main: '#003366',
-    lightGrey: "rgb(162, 162, 162)",
+    main: '#0b132b',
+    lightGrey: "#e76f51",
     white: "white",
   },
   spacing: {
     large: '100px',
     medium: '50px',
-    small: '15px',
+    small: '20px',
     tiny: '10px',
   },
 };
+
+// $color1: #0b132bff;
+// $color2: #1c2541ff;
+// $color3: #3a506bff;
+// $color4: #ef767aff;
+// $color5: #49beaaff

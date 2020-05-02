@@ -1,7 +1,9 @@
 import React from 'react';
 
 import { NavigationScreenProp } from 'react-navigation';
-import { Text, View, Button } from 'react-native';
+import { Text, View } from 'react-native';
+import Wrapper from '../components/Wrapper';
+import AuthorProfile from '../components/AuthorProfile';
 
 interface AuthorScreenProps {
   navigation: NavigationScreenProp<any>;
@@ -9,9 +11,9 @@ interface AuthorScreenProps {
 
 function AuthorScreen(Props: AuthorScreenProps) {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Details Screen</Text>
-    </View>
+    <Wrapper>
+      <AuthorProfile/>
+    </Wrapper>
   );
 }
 
