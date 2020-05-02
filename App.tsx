@@ -6,7 +6,6 @@ import { theme } from "./theme";
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { HomeScreen, AuthorScreen } from './screens/index';
-
 const Stack = createStackNavigator();
 
 export default function App() {

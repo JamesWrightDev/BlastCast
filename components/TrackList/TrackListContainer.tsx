@@ -4,6 +4,7 @@ import {
   Text,
   View,
 } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 
 type TrackProps = {
   name: string,
@@ -19,26 +20,28 @@ type TrackListProps = {
 const Track = (Props: TrackProps) => {
   return (
     <TrackWrapper>
-      <Text>
+      <TrackName>
         {Props.name}
-       </Text>
+       </TrackName>
     </TrackWrapper>
   )
 }
 
 const TrackList = (Props: TrackListProps) => {
   return (
-    <View>
-      {
-        Props.trackList.map(item =>
-            <Track
-              name={item.name}
-              length={item.length}
-              date={"10/2/2020"}
-            />
-        )
-      }
-    </View>
+    <ScrollView>
+      <View>
+        {
+          Props.trackList.map(item =>
+              <Track
+                name={item.name}
+                length={item.length}
+                date={"10/2/2020"}
+              />
+          )
+        }
+      </View>
+    </ScrollView>
   )
 }
 
@@ -46,7 +49,10 @@ const TrackWrapper = styled(View)`
   border-style: solid;
   border-bottom-width: 1px;
   border-bottom-color: grey;
-  padding: 20px 0;
+  padding: 30px 0;
 `
-
+const TrackName = styled(Text)`
+  color: white;
+  font-size: 18px;
+`
 export default TrackList;

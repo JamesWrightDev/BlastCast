@@ -31,7 +31,117 @@ const AuthorProfile = (Props: AuthorProfileProps) => {
             name: "james",
             length: 12,
             date: "120/20/10"
-          }
+          },
+          {
+            name: "james",
+            length: 12,
+            date: "120/20/10"
+          },
+          {
+            name: "james",
+            length: 12,
+            date: "120/20/10"
+          },
+          {
+            name: "james",
+            length: 12,
+            date: "120/20/10"
+          },
+          {
+            name: "james",
+            length: 12,
+            date: "120/20/10"
+          },
+          {
+            name: "james",
+            length: 12,
+            date: "120/20/10"
+          },
+          {
+            name: "james",
+            length: 12,
+            date: "120/20/10"
+          },
+          {
+            name: "james",
+            length: 12,
+            date: "120/20/10"
+          },
+          {
+            name: "james",
+            length: 12,
+            date: "120/20/10"
+          },
+          {
+            name: "james",
+            length: 12,
+            date: "120/20/10"
+          },
+          {
+            name: "james",
+            length: 12,
+            date: "120/20/10"
+          },
+          {
+            name: "james",
+            length: 12,
+            date: "120/20/10"
+          },
+          {
+            name: "james",
+            length: 12,
+            date: "120/20/10"
+          },
+          {
+            name: "james",
+            length: 12,
+            date: "120/20/10"
+          },
+          {
+            name: "james",
+            length: 12,
+            date: "120/20/10"
+          },
+          {
+            name: "james",
+            length: 12,
+            date: "120/20/10"
+          },
+          {
+            name: "james",
+            length: 12,
+            date: "120/20/10"
+          },
+          {
+            name: "james",
+            length: 12,
+            date: "120/20/10"
+          },
+          {
+            name: "james",
+            length: 12,
+            date: "120/20/10"
+          },
+          {
+            name: "james",
+            length: 12,
+            date: "120/20/10"
+          },
+          {
+            name: "james",
+            length: 12,
+            date: "120/20/10"
+          },
+          {
+            name: "james",
+            length: 12,
+            date: "120/20/10"
+          },
+          {
+            name: "james",
+            length: 12,
+            date: "120/20/10"
+          },
         ]}
       />
     </View>
