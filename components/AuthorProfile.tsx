@@ -14,7 +14,6 @@ type AuthorProfileProps = {
 }
 
 const AuthorProfile = (Props: AuthorProfileProps) => {
-
   return (
     <View>
       <ProfileImage
@@ -27,116 +26,6 @@ const AuthorProfile = (Props: AuthorProfileProps) => {
       <TrackList
         author="TechPodcast"
         trackList={[
-          {
-            name: "james",
-            length: 12,
-            date: "120/20/10"
-          },
-          {
-            name: "james",
-            length: 12,
-            date: "120/20/10"
-          },
-          {
-            name: "james",
-            length: 12,
-            date: "120/20/10"
-          },
-          {
-            name: "james",
-            length: 12,
-            date: "120/20/10"
-          },
-          {
-            name: "james",
-            length: 12,
-            date: "120/20/10"
-          },
-          {
-            name: "james",
-            length: 12,
-            date: "120/20/10"
-          },
-          {
-            name: "james",
-            length: 12,
-            date: "120/20/10"
-          },
-          {
-            name: "james",
-            length: 12,
-            date: "120/20/10"
-          },
-          {
-            name: "james",
-            length: 12,
-            date: "120/20/10"
-          },
-          {
-            name: "james",
-            length: 12,
-            date: "120/20/10"
-          },
-          {
-            name: "james",
-            length: 12,
-            date: "120/20/10"
-          },
-          {
-            name: "james",
-            length: 12,
-            date: "120/20/10"
-          },
-          {
-            name: "james",
-            length: 12,
-            date: "120/20/10"
-          },
-          {
-            name: "james",
-            length: 12,
-            date: "120/20/10"
-          },
-          {
-            name: "james",
-            length: 12,
-            date: "120/20/10"
-          },
-          {
-            name: "james",
-            length: 12,
-            date: "120/20/10"
-          },
-          {
-            name: "james",
-            length: 12,
-            date: "120/20/10"
-          },
-          {
-            name: "james",
-            length: 12,
-            date: "120/20/10"
-          },
-          {
-            name: "james",
-            length: 12,
-            date: "120/20/10"
-          },
-          {
-            name: "james",
-            length: 12,
-            date: "120/20/10"
-          },
-          {
-            name: "james",
-            length: 12,
-            date: "120/20/10"
-          },
-          {
-            name: "james",
-            length: 12,
-            date: "120/20/10"
-          },
           {
             name: "james",
             length: 12,

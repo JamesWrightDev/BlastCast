@@ -6,11 +6,16 @@ import { theme } from "./theme";
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { HomeScreen, AuthorScreen } from './screens/index';
+import { Provider } from 'react-redux';
+import configureStore from './redux/store';
+
 const Stack = createStackNavigator();
 
 export default function App() {
+  const store = configureStore();
   return (
-    <ThemeProvider theme={theme}>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{
@@ -28,5 +33,6 @@ export default function App() {
         </Stack.Navigator>
       </NavigationContainer>
     </ThemeProvider>
+    </Provider>
   );
 }
