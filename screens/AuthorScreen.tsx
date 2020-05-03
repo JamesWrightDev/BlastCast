@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from "react";
 
-import { NavigationScreenProp } from 'react-navigation';
-import { Text, View } from 'react-native';
-import Wrapper from '../components/Wrapper';
-import AuthorProfile from '../components/AuthorProfile';
-import parseFeed from '../util/xmlParser';
+import { NavigationScreenProp } from "react-navigation";
+import { Text, View } from "react-native";
+import Wrapper from "../components/Wrapper";
+import AuthorProfile from "../components/AuthorProfile";
+import parseFeed from "../util/xmlParser";
 
 interface AuthorScreenProps {
   navigation: NavigationScreenProp<any>;
@@ -12,12 +12,7 @@ interface AuthorScreenProps {
 
 function AuthorScreen(Props: AuthorScreenProps) {
   const [trackList, setTrackList] = useState([]);
-  const {
-    feedUrl,
-    name,
-    imageSource,
-    description,
-  } = Props.route.params;
+  const { feedUrl, name, imageSource, description } = Props.route.params;
 
   useEffect(() => {
     (async () => {
@@ -34,7 +29,7 @@ function AuthorScreen(Props: AuthorScreenProps) {
         name={name}
         imageUrl={imageSource}
         description={description}
-        tracks={trackList}
+        trackList={trackList}
       />
     </Wrapper>
   );

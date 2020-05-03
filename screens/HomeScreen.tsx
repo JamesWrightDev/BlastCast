@@ -28,7 +28,7 @@ const HomeScreen = (Props: HomeScreenProps) => {
 
   if (!libraryLoaded) {
     (async () => {
-      const feeds = await fetchFeeds("tech");
+      const feeds = await fetchFeeds("news");
       dispatch({
         type: "@FETCH_LIBRARY_FEEDS_SUCCESS",
         payload: feeds.results,
@@ -40,20 +40,6 @@ const HomeScreen = (Props: HomeScreenProps) => {
     <Wrapper>
       <Header>Featured</Header>
       <ScrollView>
-        <View>
-          <Rail horizontal bounces alwaysBounceHorizontal>
-            <RailItem
-              onPress={() => Props.navigation.navigate("Author")}
-              activeOpacity={0.7}
-            >
-              <Card
-                heading="Tech Podcast"
-                subheading="Wired Magazine"
-                imageUrl="https://images.pexels.com/photos/123335/pexels-photo-123335.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-              />
-            </RailItem>
-          </Rail>
-        </View>
         <View>
           <Rail horizontal bounces alwaysBounceHorizontal>
             {feedsLibrary &&

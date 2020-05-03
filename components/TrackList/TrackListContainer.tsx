@@ -3,9 +3,12 @@ import styled from 'styled-components/native';
 import {
   Text,
   View,
+  TouchableOpacity
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 import {Track} from '../../types';
+
 
 type TrackListProps = {
   trackList: Array<Track>,
@@ -22,18 +25,25 @@ const TrackItem = (Props: Track) => {
 }
 
 const TrackList = (Props: TrackListProps) => {
+  const navigation = useNavigation();
+  const handlePress = () => {
+    navigation.navigate('Player')
+  }
   return (
     <ScrollView>
       <View>
         {
           Props.trackList &&
-          Props.trackList.map(item =>
-              <TrackItem
-                name={item.title}
-                length={'123'}
-                date={"10/2/2020"}
-                sourceUrl={item.link}
-              />
+          Props.trackList.map((item, index) =>
+              <TouchableOpacity onPress={() => handlePress()}>
+                <TrackItem
+                  key={`${item.title}_${index}`}
+                  name={item.title}
+                  length={'123'}
+                  date={"10/2/2020"}
+                  sourceUrl={item.link}
+                />
+              </TouchableOpacity>
           )
         }
       </View>
@@ -42,9 +52,6 @@ const TrackList = (Props: TrackListProps) => {
 }
 
 const TrackWrapper = styled(View)`
-  border-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: grey;
   padding: 30px 0;
 `
 const TrackName = styled(Text)`

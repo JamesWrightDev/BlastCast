@@ -10,5 +10,5 @@ export type Author = {
   name: string,
   description: string,
   imageUrl: string,
-  tracks: Track[]
+  trackList: Track[]
 }
