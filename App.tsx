@@ -29,9 +29,9 @@ export default function App() {
               },
             }}
           >
+            <Stack.Screen name="Player" component={PlayerScreen} />
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="Author" component={AuthorScreen} />
-            <Stack.Screen name="Player" component={PlayerScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       </ThemeProvider>

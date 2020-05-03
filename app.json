@@ -2,6 +2,10 @@
   "name": "native",
   "displayName": "native",
   "expo": {
+    "packagerOpts": {
+      "config":"metro.config.js",
+      "sourceExts": ["js", "jsx", "svg", "ts", "tsx"]
+    },
     "name": "native",
     "slug": "native",
     "version": "1.0.0",
