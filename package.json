@@ -38,7 +38,7 @@
     "@types/react-native": "~0.61.23",
     "@types/styled-components": "^5.1.0",
     "babel-preset-expo": "~8.1.0",
-    "jest-expo": "~37.0.0",
+    "jest-expo": "~56.0.5",
     "typescript": "~3.8.3"
   },
   "jest": {
